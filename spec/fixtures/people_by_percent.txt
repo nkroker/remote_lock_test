@@ -1,0 +1,3 @@
+first_name % city % birthdate
+Mckayla % Atlanta % 1986-05-29
+Elliot % New York City % 1947-05-04

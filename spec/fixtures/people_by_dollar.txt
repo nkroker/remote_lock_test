@@ -1,0 +1,3 @@
+city $ birthdate $ last_name $ first_name
+LA $ 30-4-1974 $ Nolan $ Rhiannon
+NYC $ 5-1-1962 $ Bruen $ Rigoberto

@@ -1,0 +1,26 @@
+name: 'Repository Lockdown'
+
+on:
+  issues:
+    types: opened
+  pull_request_target:
+    types: opened
+  workflow_dispatch: ~
+
+permissions:
+  pull-requests: write
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/repo-lockdown@v2
+        with:
+          github-token: ${{ github.token }}
+          pr-comment: 'Please create a PR against your own repository. Thank you.'
+          close-pr: true
+          lock-pr: true
+          pr-lock-reason: 'resolved'
+          process-only: 'prs'
+          log-output: true
+        if: ${{ github.repository_owner == 'remotelock' }}
